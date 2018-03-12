@@ -11,7 +11,7 @@ int main() {
     _/\      _   (UDDDUDUU)
        \    /
         \/\/
-    if have hight of 0 means that we on see level 
+    if we on height of 0 that means we on see level 
     */ 
 
     int nsteps, ud = 0, valleys = 0; 
