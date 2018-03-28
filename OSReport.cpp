@@ -78,6 +78,7 @@ int main() {
 
 
 //////////////////////////////////////////////////////
+//utils functions that used in all algortithms
 bool find(int *arr, int size, int element) 
 { 
 	bool isFound = false; 
@@ -106,6 +107,9 @@ void replace(int *arr, int size, int ele1, int ele2)
 }
 
 ///////////////////////////////////////////////
+//	LRU SECTION
+///////////////////////////////////////////////
+
 int min(int *map, int size) 
 { 
 	int min = 0;
@@ -194,7 +198,10 @@ void LRU(int nFrames, int nPages, int *seq, int len)
 	cout << "LRU total miss = " << missCount << endl; 
 } 
 
-///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////
+//	MFU SECTION
+///////////////////////////////////////////////
+
 int *_max(int *freq, int size)
 { 
 	//this function takes the freq array and get the max, if there is anther element with 
@@ -330,7 +337,10 @@ void MFU(int nFrames, int nPages, int *seq, int len)
 	cout << "MFU total miss = " << missCount << endl;  
 }
 
-///////////////////////////////////////////////////////////
+///////////////////////////////////////////////
+//	LFU SECTION
+///////////////////////////////////////////////
+
 int *lfu(int *freq, int size)
 { 
 	int min = 0, flag = 0;
@@ -487,6 +497,11 @@ void LFU(int nFrames, int nPages, int *seq, int len)
 	cout << "LFU total miss = " << missCount << endl; 
 }
 
+
+///////////////////////////////////////////////
+//	OPT SECTION
+///////////////////////////////////////////////
+
 /* Optimal */
 void OPT(int nFrames, int nPages, int *seq, int len) 
 {
@@ -625,7 +640,10 @@ void OPT(int nFrames, int nPages, int *seq, int len)
 }
 
 
-//////////////////////////////////////////
+///////////////////////////////////////////////
+//	SCA SECTION
+///////////////////////////////////////////////
+
 int fifo(int *queue, int *ref_bit, int size)
 { 
 	int min; 
@@ -743,7 +761,11 @@ void SCA(int nFrames, int nPages, int *seq, int len)
 
 	cout << "Second Chance total miss = " << missCount << endl; 
 }
-/////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+//	FIFO SECTION
+///////////////////////////////////////////////
 
 /* First In First Out */ 
 void FIFO(int nFrames, int nPages, int *seq, int len) { 
